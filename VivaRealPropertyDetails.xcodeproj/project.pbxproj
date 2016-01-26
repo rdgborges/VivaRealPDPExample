@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		443340AE1C56EFF8008C6D74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443340AD1C56EFF8008C6D74 /* AppDelegate.swift */; };
+		443340B01C56EFF8008C6D74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443340AF1C56EFF8008C6D74 /* ViewController.swift */; };
+		443340B31C56EFF8008C6D74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443340B11C56EFF8008C6D74 /* Main.storyboard */; };
+		443340B51C56EFF8008C6D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443340B41C56EFF8008C6D74 /* Assets.xcassets */; };
+		443340B81C56EFF8008C6D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443340B61C56EFF8008C6D74 /* LaunchScreen.storyboard */; };
+		443340C21C56F0D2008C6D74 /* VRCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443340C11C56F0D2008C6D74 /* VRCollectionViewDataSource.swift */; };
+		443340C41C56F0E3008C6D74 /* VRCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443340C31C56F0E3008C6D74 /* VRCollectionViewDelegate.swift */; };
+		443340C71C56F21C008C6D74 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443340C61C56F21C008C6D74 /* UIDevice+Extensions.swift */; };
+		443340CB1C56F30B008C6D74 /* VRPhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443340C91C56F30B008C6D74 /* VRPhotosCollectionViewCell.swift */; };
+		443340CC1C56F30B008C6D74 /* VRPhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 443340CA1C56F30B008C6D74 /* VRPhotosCollectionViewCell.xib */; };
+		443340D41C56F4EC008C6D74 /* VRPropertyInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443340D11C56F4EC008C6D74 /* VRPropertyInfoCollectionViewCell.swift */; };
+		443340D91C56F4F7008C6D74 /* VRPropertyInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 443340D61C56F4F7008C6D74 /* VRPropertyInfoCollectionViewCell.xib */; };
+		443340E01C56F765008C6D74 /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443340DF1C56F765008C6D74 /* NibDesignable.swift */; };
+		4452D5AA1C56FF54003E5DB8 /* VRDescriptionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452D5A81C56FF54003E5DB8 /* VRDescriptionCollectionViewCell.swift */; };
+		4452D5AB1C56FF54003E5DB8 /* VRDescriptionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4452D5A91C56FF54003E5DB8 /* VRDescriptionCollectionViewCell.xib */; };
+		4452D5AD1C570339003E5DB8 /* VRPropertyDetailsCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4452D5AC1C570339003E5DB8 /* VRPropertyDetailsCollectionViewLayout.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		443340AA1C56EFF8008C6D74 /* VivaRealPropertyDetails.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VivaRealPropertyDetails.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		443340AD1C56EFF8008C6D74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		443340AF1C56EFF8008C6D74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		443340B21C56EFF8008C6D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		443340B41C56EFF8008C6D74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		443340B71C56EFF8008C6D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		443340B91C56EFF8008C6D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		443340C11C56F0D2008C6D74 /* VRCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		443340C31C56F0E3008C6D74 /* VRCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		443340C61C56F21C008C6D74 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
+		443340C91C56F30B008C6D74 /* VRPhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRPhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		443340CA1C56F30B008C6D74 /* VRPhotosCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VRPhotosCollectionViewCell.xib; sourceTree = "<group>"; };
+		443340D11C56F4EC008C6D74 /* VRPropertyInfoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRPropertyInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		443340D61C56F4F7008C6D74 /* VRPropertyInfoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VRPropertyInfoCollectionViewCell.xib; sourceTree = "<group>"; };
+		443340DF1C56F765008C6D74 /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibDesignable.swift; sourceTree = "<group>"; };
+		4452D5A81C56FF54003E5DB8 /* VRDescriptionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRDescriptionCollectionViewCell.swift; sourceTree = "<group>"; };
+		4452D5A91C56FF54003E5DB8 /* VRDescriptionCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VRDescriptionCollectionViewCell.xib; sourceTree = "<group>"; };
+		4452D5AC1C570339003E5DB8 /* VRPropertyDetailsCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRPropertyDetailsCollectionViewLayout.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		443340A71C56EFF8008C6D74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12A49408E1AF7476DB43F6E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		443340A11C56EFF8008C6D74 = {
+			isa = PBXGroup;
+			children = (
+				443340AC1C56EFF8008C6D74 /* VivaRealPropertyDetails */,
+				443340AB1C56EFF8008C6D74 /* Products */,
+				12A49408E1AF7476DB43F6E9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		443340AB1C56EFF8008C6D74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				443340AA1C56EFF8008C6D74 /* VivaRealPropertyDetails.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		443340AC1C56EFF8008C6D74 /* VivaRealPropertyDetails */ = {
+			isa = PBXGroup;
+			children = (
+				443340BF1C56F03A008C6D74 /* ViewControllers */,
+				443340C51C56F202008C6D74 /* Extensions */,
+				443340DE1C56F746008C6D74 /* Dependencies */,
+				443340AD1C56EFF8008C6D74 /* AppDelegate.swift */,
+				443340B11C56EFF8008C6D74 /* Main.storyboard */,
+				443340B41C56EFF8008C6D74 /* Assets.xcassets */,
+				443340B61C56EFF8008C6D74 /* LaunchScreen.storyboard */,
+				443340B91C56EFF8008C6D74 /* Info.plist */,
+			);
+			path = VivaRealPropertyDetails;
+			sourceTree = "<group>";
+		};
+		443340BF1C56F03A008C6D74 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				443340C01C56F09F008C6D74 /* MainController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		443340C01C56F09F008C6D74 /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				443340C81C56F2B5008C6D74 /* Cells */,
+				443340AF1C56EFF8008C6D74 /* ViewController.swift */,
+				443340C11C56F0D2008C6D74 /* VRCollectionViewDataSource.swift */,
+				443340C31C56F0E3008C6D74 /* VRCollectionViewDelegate.swift */,
+				4452D5AC1C570339003E5DB8 /* VRPropertyDetailsCollectionViewLayout.swift */,
+			);
+			name = MainController;
+			sourceTree = "<group>";
+		};
+		443340C51C56F202008C6D74 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				443340C61C56F21C008C6D74 /* UIDevice+Extensions.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		443340C81C56F2B5008C6D74 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				443340CD1C56F311008C6D74 /* Photos */,
+				443340CE1C56F325008C6D74 /* Infos */,
+				443340CF1C56F33C008C6D74 /* Description */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		443340CD1C56F311008C6D74 /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				443340C91C56F30B008C6D74 /* VRPhotosCollectionViewCell.swift */,
+				443340CA1C56F30B008C6D74 /* VRPhotosCollectionViewCell.xib */,
+			);
+			name = Photos;
+			sourceTree = "<group>";
+		};
+		443340CE1C56F325008C6D74 /* Infos */ = {
+			isa = PBXGroup;
+			children = (
+				443340D11C56F4EC008C6D74 /* VRPropertyInfoCollectionViewCell.swift */,
+				443340D61C56F4F7008C6D74 /* VRPropertyInfoCollectionViewCell.xib */,
+			);
+			name = Infos;
+			sourceTree = "<group>";
+		};
+		443340CF1C56F33C008C6D74 /* Description */ = {
+			isa = PBXGroup;
+			children = (
+				4452D5A81C56FF54003E5DB8 /* VRDescriptionCollectionViewCell.swift */,
+				4452D5A91C56FF54003E5DB8 /* VRDescriptionCollectionViewCell.xib */,
+			);
+			name = Description;
+			sourceTree = "<group>";
+		};
+		443340DE1C56F746008C6D74 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				443340DF1C56F765008C6D74 /* NibDesignable.swift */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		443340A91C56EFF8008C6D74 /* VivaRealPropertyDetails */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 443340BC1C56EFF8008C6D74 /* Build configuration list for PBXNativeTarget "VivaRealPropertyDetails" */;
+			buildPhases = (
+				443340A61C56EFF8008C6D74 /* Sources */,
+				443340A71C56EFF8008C6D74 /* Frameworks */,
+				443340A81C56EFF8008C6D74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VivaRealPropertyDetails;
+			productName = VivaRealPropertyDetails;
+			productReference = 443340AA1C56EFF8008C6D74 /* VivaRealPropertyDetails.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		443340A21C56EFF8008C6D74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = VivaReal;
+				TargetAttributes = {
+					443340A91C56EFF8008C6D74 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 443340A51C56EFF8008C6D74 /* Build configuration list for PBXProject "VivaRealPropertyDetails" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 443340A11C56EFF8008C6D74;
+			productRefGroup = 443340AB1C56EFF8008C6D74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				443340A91C56EFF8008C6D74 /* VivaRealPropertyDetails */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		443340A81C56EFF8008C6D74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443340B81C56EFF8008C6D74 /* LaunchScreen.storyboard in Resources */,
+				443340B51C56EFF8008C6D74 /* Assets.xcassets in Resources */,
+				443340B31C56EFF8008C6D74 /* Main.storyboard in Resources */,
+				4452D5AB1C56FF54003E5DB8 /* VRDescriptionCollectionViewCell.xib in Resources */,
+				443340CC1C56F30B008C6D74 /* VRPhotosCollectionViewCell.xib in Resources */,
+				443340D91C56F4F7008C6D74 /* VRPropertyInfoCollectionViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		443340A61C56EFF8008C6D74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				443340B01C56EFF8008C6D74 /* ViewController.swift in Sources */,
+				443340C21C56F0D2008C6D74 /* VRCollectionViewDataSource.swift in Sources */,
+				443340E01C56F765008C6D74 /* NibDesignable.swift in Sources */,
+				443340AE1C56EFF8008C6D74 /* AppDelegate.swift in Sources */,
+				4452D5AA1C56FF54003E5DB8 /* VRDescriptionCollectionViewCell.swift in Sources */,
+				443340D41C56F4EC008C6D74 /* VRPropertyInfoCollectionViewCell.swift in Sources */,
+				443340C71C56F21C008C6D74 /* UIDevice+Extensions.swift in Sources */,
+				443340CB1C56F30B008C6D74 /* VRPhotosCollectionViewCell.swift in Sources */,
+				4452D5AD1C570339003E5DB8 /* VRPropertyDetailsCollectionViewLayout.swift in Sources */,
+				443340C41C56F0E3008C6D74 /* VRCollectionViewDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		443340B11C56EFF8008C6D74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				443340B21C56EFF8008C6D74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		443340B61C56EFF8008C6D74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				443340B71C56EFF8008C6D74 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		443340BA1C56EFF8008C6D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		443340BB1C56EFF8008C6D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		443340BD1C56EFF8008C6D74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = VivaRealPropertyDetails/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivareal.VivaRealPropertyDetails;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		443340BE1C56EFF8008C6D74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = VivaRealPropertyDetails/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(CONFIGURATION_BUILD_DIR)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivareal.VivaRealPropertyDetails;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		443340A51C56EFF8008C6D74 /* Build configuration list for PBXProject "VivaRealPropertyDetails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				443340BA1C56EFF8008C6D74 /* Debug */,
+				443340BB1C56EFF8008C6D74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		443340BC1C56EFF8008C6D74 /* Build configuration list for PBXNativeTarget "VivaRealPropertyDetails" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				443340BD1C56EFF8008C6D74 /* Debug */,
+				443340BE1C56EFF8008C6D74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 443340A21C56EFF8008C6D74 /* Project object */;
+}
