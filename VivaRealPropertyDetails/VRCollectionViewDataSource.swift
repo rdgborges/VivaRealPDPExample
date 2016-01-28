@@ -15,11 +15,7 @@ class VRCollectionViewDataSource: NSObject, UICollectionViewDataSource {
     }
 
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if !UIDevice.iPad() {
-            return 3
-        } else {
-            return 3
-        }
+        return 4
     }
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -29,17 +25,14 @@ class VRCollectionViewDataSource: NSObject, UICollectionViewDataSource {
             switch indexPath.row {
             case 0: return pictureCell(collectionView, atIndexPath: indexPath)
             case 1: return infosCell(collectionView, atIndexPath: indexPath)
-            case 2: return descriptionCell(collectionView, atIndexPath: indexPath)
-            default: return pictureCell(collectionView, atIndexPath: indexPath)
+            default: return descriptionCell(collectionView, atIndexPath: indexPath)
             }
             
         } else {
             switch indexPath.row {
             case 0: return pictureCell(collectionView, atIndexPath: indexPath)
             case 1: return infosCell(collectionView, atIndexPath: indexPath)
-            case 2: return descriptionCell(collectionView, atIndexPath: indexPath)
-            default: return pictureCell(collectionView, atIndexPath: indexPath)
-                
+            default: return descriptionCell(collectionView, atIndexPath: indexPath)
             }
         }
         

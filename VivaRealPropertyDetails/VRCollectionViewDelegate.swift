@@ -24,8 +24,7 @@ class VRCollectionViewDelegate: NSObject, UICollectionViewDelegate {
         switch atIndex.row {
         case 0: return CGSizeMake(collectionViewWidth, 280)
         case 1: return CGSizeMake(collectionViewWidth, 194)
-        case 2: return CGSizeMake(collectionViewWidth, 400)
-        default : return CGSizeMake(collectionViewWidth, 140)
+        default: return CGSizeMake(collectionViewWidth, 250)
         }
         
     }
@@ -34,9 +33,7 @@ class VRCollectionViewDelegate: NSObject, UICollectionViewDelegate {
         switch atIndex.row {
         case 0: return CGSizeMake(collectionViewWidth, 420)
         case 1: return CGSizeMake(collectionViewWidth, 194)
-        case 2: return CGSizeMake(collectionViewWidth, 400)
-        default : return CGSizeMake(collectionViewWidth, 140)
-            
+        default: return CGSizeMake(collectionViewWidth, 250)
         }
         
     }
