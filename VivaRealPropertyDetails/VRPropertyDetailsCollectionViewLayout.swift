@@ -121,12 +121,12 @@ class VRPropertyDetailsCollectionViewLayout: UICollectionViewLayout {
                     return 1
                 }
                 
-                let multitasking = CGRectEqualToRect(window!.frame, window!.screen.bounds)
+                let isFullscreen = CGRectEqualToRect(window!.frame, window!.screen.bounds)
                 
-                if multitasking {
-                    return 1
-                } else {
+                if isFullscreen {
                     return 2
+                } else {
+                    return 1
                 }
             } else {
                 return 1
