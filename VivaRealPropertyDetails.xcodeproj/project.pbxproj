@@ -13,7 +13,6 @@
 		443340B51C56EFF8008C6D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 443340B41C56EFF8008C6D74 /* Assets.xcassets */; };
 		443340B81C56EFF8008C6D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 443340B61C56EFF8008C6D74 /* LaunchScreen.storyboard */; };
 		443340C21C56F0D2008C6D74 /* VRCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443340C11C56F0D2008C6D74 /* VRCollectionViewDataSource.swift */; };
-		443340C41C56F0E3008C6D74 /* VRCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443340C31C56F0E3008C6D74 /* VRCollectionViewDelegate.swift */; };
 		443340C71C56F21C008C6D74 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443340C61C56F21C008C6D74 /* UIDevice+Extensions.swift */; };
 		443340CB1C56F30B008C6D74 /* VRPhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443340C91C56F30B008C6D74 /* VRPhotosCollectionViewCell.swift */; };
 		443340CC1C56F30B008C6D74 /* VRPhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 443340CA1C56F30B008C6D74 /* VRPhotosCollectionViewCell.xib */; };
@@ -34,7 +33,6 @@
 		443340B71C56EFF8008C6D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		443340B91C56EFF8008C6D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		443340C11C56F0D2008C6D74 /* VRCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRCollectionViewDataSource.swift; sourceTree = "<group>"; };
-		443340C31C56F0E3008C6D74 /* VRCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		443340C61C56F21C008C6D74 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
 		443340C91C56F30B008C6D74 /* VRPhotosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VRPhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		443340CA1C56F30B008C6D74 /* VRPhotosCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VRPhotosCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				443340C81C56F2B5008C6D74 /* Cells */,
 				443340AF1C56EFF8008C6D74 /* ViewController.swift */,
 				443340C11C56F0D2008C6D74 /* VRCollectionViewDataSource.swift */,
-				443340C31C56F0E3008C6D74 /* VRCollectionViewDelegate.swift */,
 				4452D5AC1C570339003E5DB8 /* VRPropertyDetailsCollectionViewLayout.swift */,
 			);
 			name = MainController;
@@ -252,7 +249,6 @@
 				443340C71C56F21C008C6D74 /* UIDevice+Extensions.swift in Sources */,
 				443340CB1C56F30B008C6D74 /* VRPhotosCollectionViewCell.swift in Sources */,
 				4452D5AD1C570339003E5DB8 /* VRPropertyDetailsCollectionViewLayout.swift in Sources */,
-				443340C41C56F0E3008C6D74 /* VRCollectionViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

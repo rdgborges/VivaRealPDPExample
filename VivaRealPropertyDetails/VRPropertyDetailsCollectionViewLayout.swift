@@ -9,19 +9,14 @@
 import UIKit
 
 protocol VRPropertyDetailsCollectionViewLayoutDelegate {
-    
-    func collectionView(collectionView:UICollectionView, heightForItemAtIndexPath indexPath:NSIndexPath,
-        withWidth:CGFloat) -> CGFloat
+    func heightForItemAtIndexPath(indexPath: NSIndexPath, withWidth:CGFloat) -> CGFloat
 }
 
 class VRPropertyDetailsCollectionViewLayout: UICollectionViewLayout {
     
     var delegate: VRPropertyDetailsCollectionViewLayoutDelegate!
     
-    var numberOfColumns = 1
-    var cellPadding: CGFloat = 0.0
-    
-    private var cache = [UICollectionViewLayoutAttributes]()
+    private var attributesCache = [UICollectionViewLayoutAttributes]()
     
     private var contentHeight: CGFloat  = 0.0
     private var contentWidth: CGFloat {
@@ -31,59 +26,59 @@ class VRPropertyDetailsCollectionViewLayout: UICollectionViewLayout {
     
     override func prepareLayout() {
         
-        updateColumnsBasedOnScreen()
-        
-        cache = []
-        
+        let numberOfColumns = columnsBasedOnScreen()
+        attributesCache = []
         contentHeight = 0.0
         
-        // configure first view
-        let indexPath = NSIndexPath(forItem: 0, inSection: 0)
-        
-        let itemHeight = delegate.collectionView(collectionView!, heightForItemAtIndexPath: indexPath, withWidth: contentWidth)
-        let finalHeight = itemHeight + cellPadding * 2
-        
-        let frame = CGRect(x: 0, y: 0, width: contentWidth, height: finalHeight)
-        let insetFrame = CGRectInset(frame, cellPadding, cellPadding)
-        
-        let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
-        attributes.frame = insetFrame
-        cache.append(attributes)
-        
-        contentHeight = max(contentHeight, CGRectGetMaxY(frame))
-        
-        // configure other views
-        
+        // Initializes offsets arrays
         let columnWidth = contentWidth / CGFloat(numberOfColumns)
-        var xOffset = [CGFloat]()
+        var yOffset = [CGFloat](count: numberOfColumns, repeatedValue: 0)
         
+        var xOffset = [CGFloat]()
         for column in 0 ..< numberOfColumns {
             xOffset.append(CGFloat(column) * columnWidth)
         }
         
         var column = 0
-        var yOffset = [CGFloat](count: numberOfColumns, repeatedValue: contentHeight)
         
-        for item in 1 ..< collectionView!.numberOfItemsInSection(0) {
+        for item in 0 ..< collectionView!.numberOfItemsInSection(0) {
             
+            // Calculates cell frame
             let indexPath = NSIndexPath(forItem: item, inSection: 0)
+            let itemHeight = delegate.heightForItemAtIndexPath(indexPath, withWidth: columnWidth)
             
-            let width = columnWidth - cellPadding * 2
+            var frame: CGRect
+            if item == 0 {
+                // if first cell, cell width == content width
+                frame = CGRect(x: xOffset[column], y: yOffset[column], width: contentWidth, height: itemHeight)
+            } else {
+                // cell width == column width
+                frame = CGRect(x: xOffset[column], y: yOffset[column], width: columnWidth, height: itemHeight)
+            }
             
-            let itemHeight = delegate.collectionView(collectionView!, heightForItemAtIndexPath: indexPath, withWidth: width)
-            let finalHeight = itemHeight + cellPadding * 2
-            
-            let frame = CGRect(x: xOffset[column], y: yOffset[column], width: width, height: finalHeight)
-            let insetFrame = CGRectInset(frame, cellPadding, cellPadding)
-            
+            // Append cell attributes to cache
             let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
-            attributes.frame = insetFrame
-            cache.append(attributes)
+            attributes.frame = frame
+            attributesCache.append(attributes)
             
+            // Updates contentHeight
             contentHeight = max(contentHeight, CGRectGetMaxY(frame))
-            yOffset[column] = yOffset[column] + finalHeight
             
-            column = column >= (numberOfColumns - 1) ? 0 : ++column
+            // Updates y position of next cell
+            if item == 0 {
+                for i in 0..<yOffset.count {
+                    yOffset[i] = itemHeight
+                }
+            } else {
+                yOffset[column] = yOffset[column] + itemHeight
+            }
+            
+            // Determines column where next cell will be placed
+            if item == 0 {
+                column = 0
+            } else {
+                column = column >= (numberOfColumns - 1) ? 0 : ++column
+            }
             
         }
     }
@@ -96,7 +91,7 @@ class VRPropertyDetailsCollectionViewLayout: UICollectionViewLayout {
         
         var layoutAttributes = [UICollectionViewLayoutAttributes]()
         
-        for attributes in cache {
+        for attributes in attributesCache {
             if CGRectIntersectsRect(attributes.frame, rect) {
                 layoutAttributes.append(attributes)
             }
@@ -104,11 +99,11 @@ class VRPropertyDetailsCollectionViewLayout: UICollectionViewLayout {
         return layoutAttributes
     }
     
-    func updateColumnsBasedOnScreen() {
+    func columnsBasedOnScreen() -> Int {
         let orientation = UIApplication.sharedApplication().statusBarOrientation
         if orientation == UIInterfaceOrientation.Portrait || orientation == UIInterfaceOrientation.PortraitUpsideDown {
             // portrait
-            self.numberOfColumns = 1
+            return 1
             
         } else {
             // landscape
@@ -117,16 +112,24 @@ class VRPropertyDetailsCollectionViewLayout: UICollectionViewLayout {
             
             if horizontalSizeClass == UIUserInterfaceSizeClass.Regular && verticalSizeClass == UIUserInterfaceSizeClass.Regular {
                 let applicationDelegate = UIApplication.sharedApplication().delegate
-                let isFullScreen = CGRectEqualToRect(applicationDelegate!.window!!.frame, applicationDelegate!.window!!.screen.bounds)
                 
-                if isFullScreen {
-                    self.numberOfColumns = 2
+                guard let delegate = applicationDelegate else {
+                    return 1
+                }
+                
+                guard let window = delegate.window else {
+                    return 1
+                }
+                
+                let multitasking = CGRectEqualToRect(window!.frame, window!.screen.bounds)
+                
+                if multitasking {
+                    return 1
                 } else {
-                    self.numberOfColumns = 1
+                    return 2
                 }
             } else {
-                self.numberOfColumns = 1
-                
+                return 1
             }
             
         }

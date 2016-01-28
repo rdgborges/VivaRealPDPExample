@@ -12,7 +12,6 @@ class ViewController: UIViewController, VRPropertyDetailsCollectionViewLayoutDel
 
     @IBOutlet var collectionView: UICollectionView!
     var collectionViewDataSource: VRCollectionViewDataSource!
-    var collectionViewDelegate: VRCollectionViewDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,18 +37,14 @@ class ViewController: UIViewController, VRPropertyDetailsCollectionViewLayoutDel
         self.collectionView.registerNib(UINib(nibName: "VRDescriptionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "descriptionCollectionViewCellIdentifier")
         
         self.collectionViewDataSource = VRCollectionViewDataSource()
-        self.collectionViewDelegate = VRCollectionViewDelegate()
-        
         self.collectionView.dataSource = self.collectionViewDataSource
-        self.collectionView.delegate = self.collectionViewDelegate
         
     }
     
     //MARK: VRPropertyDetailsCollectionViewLayoutDelegate
     
-    func collectionView(collectionView:UICollectionView, heightForItemAtIndexPath indexPath:NSIndexPath,
-        withWidth:CGFloat) -> CGFloat {
-            return self.collectionViewDelegate.sizeForCell(self.collectionView, collectionViewWidth: withWidth, atIndex: indexPath).height
+    func heightForItemAtIndexPath(indexPath: NSIndexPath, withWidth:CGFloat) -> CGFloat {
+            return self.collectionViewDataSource.sizeForCell(atIndex: indexPath, collectionViewWidth: withWidth).height
     }
     
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {

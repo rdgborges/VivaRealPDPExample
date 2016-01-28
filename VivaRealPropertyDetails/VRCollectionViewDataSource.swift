@@ -20,20 +20,10 @@ class VRCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        if !UIDevice.iPad() {
-            
-            switch indexPath.row {
-            case 0: return pictureCell(collectionView, atIndexPath: indexPath)
-            case 1: return infosCell(collectionView, atIndexPath: indexPath)
-            default: return descriptionCell(collectionView, atIndexPath: indexPath)
-            }
-            
-        } else {
-            switch indexPath.row {
-            case 0: return pictureCell(collectionView, atIndexPath: indexPath)
-            case 1: return infosCell(collectionView, atIndexPath: indexPath)
-            default: return descriptionCell(collectionView, atIndexPath: indexPath)
-            }
+        switch indexPath.row {
+        case 0: return pictureCell(collectionView, atIndexPath: indexPath)
+        case 1: return infosCell(collectionView, atIndexPath: indexPath)
+        default: return descriptionCell(collectionView, atIndexPath: indexPath)
         }
         
     }
@@ -56,6 +46,29 @@ class VRCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         
         return cell
     }
-
+    
+    func sizeForCell(atIndex indexPath: NSIndexPath, collectionViewWidth : CGFloat) -> CGSize {
+        if !UIDevice.iPad() {
+            return sizeForCellOniPhone(atIndex: indexPath, collectionViewWidth: collectionViewWidth)
+        } else {
+            return sizeForCellOniPad(atIndex: indexPath, collectionViewWidth: collectionViewWidth)
+        }
+    }
+    
+    func sizeForCellOniPhone(atIndex indexPath: NSIndexPath, collectionViewWidth : CGFloat) -> CGSize {
+        switch indexPath.row {
+        case 0: return CGSizeMake(collectionViewWidth, 280)
+        case 1: return CGSizeMake(collectionViewWidth, 194)
+        default: return CGSizeMake(collectionViewWidth, 250)
+        }
+    }
+    
+    func sizeForCellOniPad(atIndex indexPath: NSIndexPath, collectionViewWidth : CGFloat) -> CGSize {
+        switch indexPath.row {
+        case 0: return CGSizeMake(collectionViewWidth, 420)
+        case 1: return CGSizeMake(collectionViewWidth, 194)
+        default: return CGSizeMake(collectionViewWidth, 250)
+        }
+    }
 
 }
